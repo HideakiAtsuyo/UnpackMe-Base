@@ -20,7 +20,7 @@ namespace CrackMe
             JustBecauseIWant("Yeah a basic crack me", 500);
             JustBecauseIWant("And now?\n", 750);
             Console.WriteWithGradient(ask, Color.Blue, Color.Red, 14);
-            if (Console.ReadLine() == "fuck")
+            if (Console.ReadLine() == "Choose a value?")
             {
                 Console.WriteLine("You're a good reverser! :)", Color.Green);
             } else
