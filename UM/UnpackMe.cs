@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Security.Principal;
 using System.Threading;
 using System.Windows.Forms;
@@ -102,37 +102,37 @@ namespace UnpackMe //Separated Stuff from the Form
         public void LoadSomeThings()
         {
             r = false;
-            string ar = Environment.Is64BitOperatingSystem ? string.Join("", x6) : string.Join("", x8);
-            AL.Text = $"{string.Join("", a)}{ar}";
-            UL.Text = $"{string.Join("", u)}{Environment.UserName}";
-            AAL.Text = $"{string.Join("", EAA)}{new WindowsPrincipal(WindowsIdentity.GetCurrent()).IsInRole(WindowsBuiltInRole.Administrator)}";
-            Ps.Text = string.Join("", hlmao);
-            VBtn.Text = string.Join("", v);
-            ERL.Text = $"{string.Join("", ER)}{string.Join("", s)}";
+            string ar = Environment.Is64BitOperatingSystem ? string.Join(string.Empty, x6) : string.Join(string.Empty, x8);
+            AL.Text = $"{string.Join(string.Empty, a)}{ar}";
+            UL.Text = $"{string.Join(string.Empty, u)}{Environment.UserName}";
+            AAL.Text = $"{string.Join(string.Empty, EAA)}{new WindowsPrincipal(WindowsIdentity.GetCurrent()).IsInRole(WindowsBuiltInRole.Administrator)}";
+            Ps.Text = string.Join(string.Empty, hlmao);
+            VBtn.Text = string.Join(string.Empty, v);
+            ERL.Text = $"{string.Join(string.Empty, ER)}{string.Join(string.Empty, s)}";
         }
         
         private void VBtn_Click(object sender, EventArgs e)
         {
             if (!AcceptOrDie.Checked)
             {
-                MessageBox.Show(string.Join("", an) + "\nI did it for you !");
+                MessageBox.Show(string.Join(string.Empty, an) + "\nI did it for you !");
                 AcceptOrDie.Checked = true;
                 return;
             }
             switch (Ps.Text)
             {
-                case var value when value == $"{string.Join("", hx)}":
-                    MessageBox.Show(string.Join("", dhm));
+                case var value when value == $"{string.Join(string.Empty, hx)}":
+                    MessageBox.Show(string.Join(string.Empty, dhm));
                     break;
-                case var value when value == $"{string.Join("", hlmao)}":
-                    MessageBox.Show(string.Join("", dm));
+                case var value when value == $"{string.Join(string.Empty, hlmao)}":
+                    MessageBox.Show(string.Join(string.Empty, dm));
                     break;
-                case var value when value == $"{string.Join("", h)}":
+                case var value when value == $"{string.Join(string.Empty, h)}":
                     r = true;
                     if(PsS.Enabled != true)
                     {
                         PsS.Enabled = true;
-                        MessageBox.Show(string.Join("", s) + " you got it! Now try to get a valid key :)");
+                        MessageBox.Show(string.Join(string.Empty, s) + " you got it! Now try to get a valid key :)");
                         //Clipboard.SetText("Format: `user:pass`\n\nAkame ga Kill!:10308|10308|20616");
                         NotePad.Show("Valid Example:\n\nU: Akame ga Kill!\nK: 10308|7959|2974");
                     } else
@@ -143,27 +143,35 @@ namespace UnpackMe //Separated Stuff from the Form
                     }
 
                     break;
-                case var value when value == $"{string.Join("", s)}":
-                    MessageBox.Show(string.Join("", nt));
+                case var value when value == $"{string.Join(string.Empty, s)}":
+                    MessageBox.Show(string.Join(string.Empty, nt));
                     break;
-                case var value when value == $"{string.Join("", f)}":
-                    MessageBox.Show(string.Join("", y));
+                case var value when value == $"{string.Join(string.Empty, f)}":
+                    MessageBox.Show(string.Join(string.Empty, y));
                     break;
 
                 default:
-                    if (KeygenPart.ValidateLicense(Ps.Text, PsS.Text))
+                    if(PsS.Enabled == true)
                     {
-                        if (Ps.Text == "Akame ga Kill!" && PsS.Text == "10308|7959|2974")
+                        if (KeygenPart.ValidateLicense(Ps.Text, PsS.Text))
                         {
-                            MessageBox.Show(string.Join("", sbn));
-                        } else
+                            if (Ps.Text == "Akame ga Kill!" && PsS.Text == "10308|7959|2974")
+                            {
+                                MessageBox.Show(string.Join(string.Empty, sbn));
+                            }
+                            else
+                            {
+                                k = true;
+                                MessageBox.Show(string.Join(string.Empty, s));
+                            }
+                        }
+                        else
                         {
-                            k = true;
-                            MessageBox.Show(string.Join("", s));
+                            MessageBox.Show(string.Join(string.Empty, f));
                         }
                     } else
                     {
-                        MessageBox.Show(string.Join("", f));
+                        MessageBox.Show(string.Join(string.Empty, f));
                     }
                     break;
             }
@@ -173,18 +181,18 @@ namespace UnpackMe //Separated Stuff from the Form
         {
             switch (r.ToString())
             {
-                case var value when value == $"{string.Join("", CST)}":
-                    MessageBox.Show(string.Join("", CSM));
+                case var value when value == $"{string.Join(string.Empty, CST)}":
+                    MessageBox.Show(string.Join(string.Empty, CSM));
                     //Environment.Exit(0);
                     break;
-                case var value when value == $"{string.Join("", CSF)}":
-                    MessageBox.Show(string.Join("", CFM));
+                case var value when value == $"{string.Join(string.Empty, CSF)}":
+                    MessageBox.Show(string.Join(string.Empty, CFM));
                     //Environment.Exit(-1);
                     break;
             }
             if (k)
             {
-                MessageBox.Show(string.Join("", CSM2));
+                MessageBox.Show(string.Join(string.Empty, CSM2));
             }
             Environment.Exit(0);
         }
